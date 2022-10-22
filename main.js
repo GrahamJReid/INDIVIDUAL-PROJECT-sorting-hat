@@ -1,11 +1,5 @@
-const students =[
-  {
-    id:1,
-    Name: "",
-    House:"",
-
-  }
-];
+const students =[]
+  
 
 
 /////render on dom function//////
@@ -40,9 +34,9 @@ const studentsOnDom = (students) => {
     domStudent += `<div class="card" style="width: 18rem;">
     <img class="card-img-top" src="..." alt="Card image cap">
     <div class="card-body">
-      <h5 class="card-title">${member.Name}</h5>
-      <p class="card-text">Hello I am the Sorting Hat</p>
-      <button id="showForm">Start Sorting</button>
+      <h5 class="card-title">${member.name}</h5>
+      <p class="card-text">${member.house}</p>
+      <button id="expelStudent">EXPEL</button>
     </div>
   </div>
     `
@@ -60,7 +54,8 @@ const newStudent = function (event) {
   event.preventDefault();
   const obj = {
     id:students.length + 1,
-    name:document.querySelector("#Name").value
+    name:document.querySelector("#Name").value,
+    house:["raven","junbug","octopus"]
     
   }
   students.push(obj);
