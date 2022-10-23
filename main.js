@@ -10,7 +10,7 @@ const renderToDom = (id, htmlToRender) => {
 ///////get the form on the dom/////////
 const formOnDom = () =>{
 
-const wantForm = `<form>
+const wantForm = `<form id="sortForm">
 
 <div class="form-group">
   <label for="Name">Student</label>
@@ -20,6 +20,8 @@ const wantForm = `<form>
 <button id="sortButton" type="submit" class="btn btn-primary">Sort</button>
 </form>`;
 renderToDom("#form",wantForm);
+
+
 }
 
 const showFormButton = document.querySelector("#showForm")
@@ -52,7 +54,7 @@ const student = document.querySelector("#student");
 
 const newStudent = function (event) {
   event.preventDefault();
-  let househouse =["raven","junbug","octopus"];
+  let househouse =["Ravenclaw","Gryffindor","Hufflepuff","Slytherin"];
   function randomHouse (arr){
 for (let i=0;i<househouse.length;i++){
   return arr[Math.floor(Math.random() * arr.length)]
@@ -66,7 +68,7 @@ for (let i=0;i<househouse.length;i++){
   }
   students.push(obj);
   studentsOnDom(students)
-  form.reset();
+  document.getElementById("sortForm").reset();
 }
 form.addEventListener('submit',newStudent);
 ////////////////////////
