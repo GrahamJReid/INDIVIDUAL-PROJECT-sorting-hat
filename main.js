@@ -52,10 +52,16 @@ const student = document.querySelector("#student");
 
 const newStudent = function (event) {
   event.preventDefault();
+  let househouse =["raven","junbug","octopus"];
+  function randomHouse (arr){
+for (let i=0;i<househouse.length;i++){
+  return arr[Math.floor(Math.random() * arr.length)]
+}
+  }
   const obj = {
     id:students.length + 1,
     name:document.querySelector("#Name").value,
-    house:["raven","junbug","octopus"]
+    house:randomHouse(househouse)
     
   }
   students.push(obj);
