@@ -70,9 +70,9 @@ for (let i=0;i<househouse.length;i++){
     
   }
   students.push(obj);
-  vold.push(obj);
+  //vold.push(obj);
   studentsOnDom(students)
-  document.getElementById("sortForm").reset();
+  //document.getElementById("sortForm").reset();
 }
 form.addEventListener('submit',newStudent);
 //////////////////////VoldONDOM////////////////////////////////////
@@ -101,13 +101,13 @@ app.addEventListener('click', (e) => {
   if (e.target.id.includes("expelStudent")) {
 ///////////////////////////////////
 
-//const obj = {
- // id:vold.length + 1,
- //name:document.querySelector("#Name").value,
+const obj = {
+  id:vold.length + 1,
+ name:document.querySelector("#Name").value,
   
   
-//}
-//vold.push(obj);
+}
+vold.push(obj);
 ///////////////////////////////////
     const [method, id] = e.target.id.split("--");
 
