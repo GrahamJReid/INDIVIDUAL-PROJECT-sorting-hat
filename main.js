@@ -38,7 +38,7 @@ const studentsOnDom = (students) => {
     <div class="card-body">
       <h5 class="card-title">${member.name}</h5>
       <p class="card-text">${member.house}</p>
-      <button id="expelStudent">EXPEL</button>
+      <button id="expelStudent--">EXPEL</button>
     </div>
   </div>
     `
@@ -71,4 +71,15 @@ for (let i=0;i<househouse.length;i++){
   document.getElementById("sortForm").reset();
 }
 form.addEventListener('submit',newStudent);
-////////////////////////
+////////////////////////delete/transfer to vold//////////
+
+const app = document.querySelector("#student");
+app.addEventListener('click', (e) => {
+  if (e.target.id.includes("expelStudent")) {
+    const [method, id] = e.target.id.split("--");
+
+    const index = students.findIndex(e => e.id === Number(id));
+    students.splice(index, 1);
+    studentsOnDom(students);
+  }
+});
