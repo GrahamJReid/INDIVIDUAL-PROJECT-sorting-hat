@@ -37,7 +37,7 @@ const studentsOnDom = (students) => {
     <div class="card-body">
       <h5 class="card-title" id="testing"><div id="voldName">${member.name}</div></h5>
       <p class="card-text">${member.house}</p>
-      <button id="expelStudent--">EXPEL</button>
+      <button id="expelStudent--${member.id}">EXPEL</button>
     </div>
   </div>
     `
@@ -56,9 +56,9 @@ const newStudent = function (event) {
   let househouse =["Ravenclaw","Gryffindor","Hufflepuff","Slytherin"];
 
   function randomHouse (arr){
-for (let i=0;i<househouse.length;i++){
+
   return arr[Math.floor(Math.random() * arr.length)]
-}
+
   }
 
   const obj = {
@@ -80,13 +80,13 @@ form.addEventListener('submit',newStudent);
 
 const app = document.querySelector("#student");
 app.addEventListener('click', (e) => {
-  if (e.target.id.includes("expelStudent")) {
+  if (e.target.id.includes("expelStudent--")) {
 
-    const [method, id] = e.target.id.split("--");
+    const [, id] = e.target.id.split("--");
 
     const index = students.findIndex(e => e.id === Number(id));
     let removed = students.splice(index, 1);
-    vold.push(removed);
+    vold.push(removed[0]);
     
     
 
@@ -95,7 +95,7 @@ app.addEventListener('click', (e) => {
     
     
     studentsOnDom(students);
-    voldOnDom(vold.flat());
+    voldOnDom(vold);
     console.log(vold);
     
   }
@@ -110,7 +110,7 @@ const voldOnDom = (vold) => {
     <h1>badbadbad</h1>
       <h5 class="card-title">${member.name}</h5>
       <p class="card-text">${member.house}</p>
-      <button id="expelStudent--">EXPEL</button>
+     
     </div>
   </div>
     `
