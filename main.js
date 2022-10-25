@@ -21,8 +21,6 @@ const wantForm = `<form id="sortForm">
 <button id="sortButton" type="submit" class="btn btn-primary">Sort</button>
 </form>`;
 renderToDom("#form",wantForm);
-
-
 }
 
 const showFormButton = document.querySelector("#showForm")
@@ -37,7 +35,7 @@ const studentsOnDom = (students) => {
     domStudent += `<div class="card" style="width: 18rem;">
     <img class="card-img-top" src="..." alt="Card image cap">
     <div class="card-body">
-      <h5 class="card-title" id="testing">${member.name}</h5>
+      <h5 class="card-title" id="testing"><div id="voldName">${member.name}</div></h5>
       <p class="card-text">${member.house}</p>
       <button id="expelStudent--">EXPEL</button>
     </div>
@@ -72,11 +70,37 @@ for (let i=0;i<househouse.length;i++){
   students.push(obj);
   //vold.push(obj);
   studentsOnDom(students)
-  //document.getElementById("sortForm").reset();
+  document.getElementById("sortForm").reset();
 }
 form.addEventListener('submit',newStudent);
-//////////////////////VoldONDOM////////////////////////////////////
 
+
+
+////////////////////////delete/transfer to vold//////////
+
+const app = document.querySelector("#student");
+app.addEventListener('click', (e) => {
+  if (e.target.id.includes("expelStudent")) {
+
+    const [method, id] = e.target.id.split("--");
+
+    const index = students.findIndex(e => e.id === Number(id));
+    let removed = students.splice(index, 1);
+    vold.push(removed);
+    
+    
+
+
+
+    
+    
+    studentsOnDom(students);
+    voldOnDom(vold.flat());
+    console.log(vold);
+    
+  }
+});
+/////////////////////////////////////volONDOM//////////////////////////////////
 const voldOnDom = (vold) => {
   let domVold ="";
   for(const member of vold) {
@@ -92,40 +116,50 @@ const voldOnDom = (vold) => {
     `
   }
   renderToDom("#vold",domVold);
-}
-
-////////////////////////delete/transfer to vold//////////
-
-const app = document.querySelector("#student");
-app.addEventListener('click', (e) => {
-  if (e.target.id.includes("expelStudent")) {
-///////////////////////////////////
-
-const obj = {
-  id:vold.length + 1,
- name:document.querySelector("#Name").value,
-  
   
 }
-vold.push(obj);
-///////////////////////////////////
-    const [method, id] = e.target.id.split("--");
+/////////////////////////////filter///////////////////////////////////////
+const filter = (array, house) => {
+  const typeArray = [];
 
-    const index = students.findIndex(e => e.id === Number(id));
-    students.splice(index, 1);
-    
-
-
-
-
-
-    
-    
-    studentsOnDom(students);
-    voldOnDom(vold);
+  for (const member of array) {
+    if (member.house === house) {
+      typeArray.push(member);
+    }
   }
+
+  return typeArray;
+}
+studentsOnDom(students);
+
+const showRavenclaw = document.querySelector('#yes');
+const showG = document.querySelector('#yes2');
+const showS = document.querySelector('#yes3');
+const showH = document.querySelector('#yes4');
+const showA = document.querySelector('#yes5');
+
+
+
+showRavenclaw.addEventListener('click', () => {
+  const catPets = filter(students, 'Ravenclaw');
+  studentsOnDom(catPets);
+  console.log('does this work');
 });
-
-
-  
-////////////////////////////////////////////selecting student for expel 
+showG.addEventListener('click', () => {
+  const catPets = filter(students, 'Gryffindor');
+  studentsOnDom(catPets);
+  console.log('does this work');
+});
+showS.addEventListener('click', () => {
+  const catPets = filter(students, 'Slytherin');
+  studentsOnDom(catPets);
+  console.log('does this work');
+});
+showH.addEventListener('click', () => {
+  const catPets = filter(students, 'Hufflepuff');
+  studentsOnDom(catPets);
+  console.log('does this work');
+});
+showA.addEventListener('click', () => {
+  studentsOnDom(students);
+});
