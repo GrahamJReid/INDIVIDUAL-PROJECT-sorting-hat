@@ -1,3 +1,49 @@
 body{
   background-color:rgb(115, 115, 232);
+  text-align:center;
+  color:black;
+}
+.page-title{
+  color:gold;
+}
+.sort-div{
+  display: flex;
+  flex-direction:row;
+  justify-content: center;
+  margin:25px;
+
+}
+.sort-card{
+ display:flex;
+ justify-content: center;
+margin:25px;
+
+}
+.sort-card-body{
+  background-color:gold;
+}
+
+.hogwarts-student-div{
+
+
+}
+.voldemort-pet-div{
+  
+
+}
+.card-container{
+  display:flex;
+  justify-content:space-evenly ;
+}
+.Ravenclaw{
+  background-color:blue;
+}
+.Gryffindor{
+  background-color:red;
+}
+.Slytherin{
+  background-color: green;
+}
+.Hufflepuff{
+  background-color:yellow
 }

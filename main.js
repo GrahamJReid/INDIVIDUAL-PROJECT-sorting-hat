@@ -32,9 +32,9 @@ showFormButton.addEventListener('click', ()=>{
 const studentsOnDom = (students) => {
   let domStudent ="";
   for(const member of students) {
-    domStudent += `<div class="card" style="width: 18rem;">
-    <img class="card-img-top" src="..." alt="Card image cap">
-    <div class="card-body">
+    domStudent += `<div class="card ${member.house}" style="width: 18rem;">
+    <img class="card-img-top" src="..." alt="">
+    <div id="studentCardBody" class="card-body">
       <h5 class="card-title" id="testing"><div id="voldName">${member.name}</div></h5>
       <p class="card-text">${member.house}</p>
       <button id="expelStudent--${member.id}">EXPEL</button>
@@ -42,6 +42,7 @@ const studentsOnDom = (students) => {
   </div>
     `
   }
+ 
   renderToDom("#student",domStudent);
 }
 
@@ -68,7 +69,10 @@ const newStudent = function (event) {
     
   }
   students.push(obj);
-  //vold.push(obj);
+  
+  
+  students.sort((a, b) => a.house.localeCompare(b.house))
+
   studentsOnDom(students)
   document.getElementById("sortForm").reset();
 }
@@ -104,12 +108,12 @@ app.addEventListener('click', (e) => {
 const voldOnDom = (vold) => {
   let domVold ="";
   for(const member of vold) {
-    domVold += `<div> <h3>voldvoldvold</h3></div><div class="card" style="width: 18rem;">
-    <img class="card-img-top" src="..." alt="Card image cap">
+    domVold += `<div> <h3></h3></div><div class="card" style="width: 18rem;">
+    <img class="card-img-top" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBY2iEMgrlOSRQibKeylnjBKuzRIf1-JSbQQ&usqp=CAU" alt="Card image cap">
     <div class="card-body">
-    <h1>badbadbad</h1>
+    <h1>Voldemort's Pet</h1>
       <h5 class="card-title">${member.name}</h5>
-      <p class="card-text">${member.house}</p>
+      <p class="card-text">Taken from ${member.house}</p>
      
     </div>
   </div>
@@ -132,7 +136,7 @@ const filter = (array, house) => {
 }
 studentsOnDom(students);
 
-const showRavenclaw = document.querySelector('#yes');
+const showR = document.querySelector('#yes');
 const showG = document.querySelector('#yes2');
 const showS = document.querySelector('#yes3');
 const showH = document.querySelector('#yes4');
@@ -140,7 +144,7 @@ const showA = document.querySelector('#yes5');
 
 
 
-showRavenclaw.addEventListener('click', () => {
+showR.addEventListener('click', () => {
   const catPets = filter(students, 'Ravenclaw');
   studentsOnDom(catPets);
   console.log('does this work');
@@ -163,3 +167,9 @@ showH.addEventListener('click', () => {
 showA.addEventListener('click', () => {
   studentsOnDom(students);
 });
+
+const startApp = () => {
+  studentsOnDom(students);
+  events();
+}
+startApp();
