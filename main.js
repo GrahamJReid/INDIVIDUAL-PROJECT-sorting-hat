@@ -10,12 +10,13 @@ const renderToDom = (id, htmlToRender) => {
 };
 ///////get the form on the dom/////////
 const formOnDom = () =>{
-
+//class="form-group"
 const wantForm = `<form id="sortForm">
 
-<div class="form-group">
-  <label for="Name">Student</label>
-  <input type="text" class="form-control" id="Name" placeholder="">
+<div class ="form-div">
+
+  <label for="Name"></label>
+  <input type="text" class="form-control " id="Name" placeholder="Student Name">
 </div>
 
 <button id="sortButton" type="submit" class="btn btn-primary">Sort</button>
