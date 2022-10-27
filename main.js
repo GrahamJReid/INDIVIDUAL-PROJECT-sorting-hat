@@ -29,11 +29,20 @@ const showFormButton = document.querySelector("#showForm")
 showFormButton.addEventListener('click', ()=>{
   formOnDom()
 });
-
+//////////////emblems on cards//////////////////////////
 const imageEmblem = function (yes) {
   if(yes === 'Ravenclaw') {
 return 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQykfFWLFvp3OaBmlTCbJg3D2p6d_tU8BMIuA&usqp=CAU'
-  }}
+}else if(yes === 'Gryffindor'){
+  return 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQE_Y2vW6O9FTMy2OKWUTycwRoaZhHg25XMA&usqp=CAU'
+}else if(yes === 'Slytherin'){
+  return 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4NMPlIS0G3xFIqqvx5Bfe9VFfZjDpxt1lxw&usqp=CAU'
+}else if(yes === 'Hufflepuff'){
+  return 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHL9s8IOBnDwmAciv4UuOl50ZnSNcjKdd6aZ3gV6aX9qsMjYEC2CgRJ_4Wfqv7LwyM5zo&usqp=CAU'
+}
+
+
+}
 //////////////studentsOnDom/////////////
 const studentsOnDom = (students) => {
   let domStudent ="";
@@ -67,9 +76,7 @@ const newStudent = function (event) {
    const randomHouse = function  (arr){
   return arr[Math.floor(Math.random() * arr.length)]
   }
-  ///////////////////house emblem////////////////
   
-////////////////////////////////////////////////
   const obj = {
     id:students.length + 1,
     name:document.querySelector("#Name").value,
