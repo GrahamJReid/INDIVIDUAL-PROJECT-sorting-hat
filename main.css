@@ -4,7 +4,7 @@ body{
   background-image: url("http://simplywallpaper.net/pictures/2010/10/02/Floating-Candles.jpg");
   
   background-size:1300px;
-  background-color:rgb(115, 115, 232);
+ 
   
   text-align:center;
   color:black;
@@ -56,14 +56,15 @@ border:solid black 2px;
   justify-content:space-evenly ;
 }
 .Ravenclaw{
-  background-color:blue;
+  background-image: linear-gradient(to right,#0E1A40 ,#946B2D );
 }
 .Gryffindor{
-  background-color:red;
+  background-image: linear-gradient(to right,#740001 ,#D3A625 );
 }
 .Slytherin{
-  background-color: green;
+  background-image: linear-gradient(to right,#1A472A ,#5D5D5D);
+
 }
 .Hufflepuff{
-  background-color:yellow
+  background-image: linear-gradient(to right,#FFD800 ,#000000);
 }

@@ -29,12 +29,17 @@ const showFormButton = document.querySelector("#showForm")
 showFormButton.addEventListener('click', ()=>{
   formOnDom()
 });
+
+const imageEmblem = function (yes) {
+  if(yes === 'Ravenclaw') {
+return 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQykfFWLFvp3OaBmlTCbJg3D2p6d_tU8BMIuA&usqp=CAU'
+  }}
 //////////////studentsOnDom/////////////
 const studentsOnDom = (students) => {
   let domStudent ="";
   for(const member of students) {
     domStudent += `<div class="card ${member.house}" style="width: 18rem;">
-    <img class="card-img-top" src="..." alt="">
+    <img class="card-img-top" src="${imageEmblem(member.house)}"
     <div id="studentCardBody" class="card-body">
       <h5 class="card-title" id="testing"><div id="voldName">${member.name}</div></h5>
       <p class="card-text">${member.house}</p>
@@ -42,6 +47,7 @@ const studentsOnDom = (students) => {
     </div>
   </div>
     `
+
   }
  
   renderToDom("#student",domStudent);
@@ -55,27 +61,35 @@ const student = document.querySelector("#student");
 
 const newStudent = function (event) {
   event.preventDefault();
+
+
   let househouse =["Ravenclaw","Gryffindor","Hufflepuff","Slytherin"];
-
-  function randomHouse (arr){
-
+   const randomHouse = function  (arr){
   return arr[Math.floor(Math.random() * arr.length)]
-
   }
-
+  ///////////////////house emblem////////////////
+  
+////////////////////////////////////////////////
   const obj = {
     id:students.length + 1,
     name:document.querySelector("#Name").value,
-    house:randomHouse(househouse)
+    house:randomHouse(househouse),
+     
     
   }
-  students.push(obj);
   
+  
+  console.log(obj.house);
+  students.push(obj);
   
   students.sort((a, b) => a.house.localeCompare(b.house))
 
   studentsOnDom(students)
   document.getElementById("sortForm").reset();
+////////////////////////////////////////////////////////
+
+
+  ////////////////////////////////////////////////////////
 }
 form.addEventListener('submit',newStudent);
 
@@ -124,6 +138,9 @@ const voldOnDom = (vold) => {
   
 }
 /////////////////////////////filter///////////////////////////////////////
+
+
+
 const filter = (array, house) => {
   const typeArray = [];
 
