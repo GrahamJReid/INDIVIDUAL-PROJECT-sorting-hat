@@ -32,13 +32,13 @@ showFormButton.addEventListener('click', ()=>{
 //////////////emblems on cards//////////////////////////
 const imageEmblem = function (yes) {
   if(yes === 'Ravenclaw') {
-return 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQykfFWLFvp3OaBmlTCbJg3D2p6d_tU8BMIuA&usqp=CAU'
+return 'https://i.pinimg.com/736x/16/ee/c9/16eec9b0e3d461ec25078ae8b88d1870.jpg'
 }else if(yes === 'Gryffindor'){
-  return 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQE_Y2vW6O9FTMy2OKWUTycwRoaZhHg25XMA&usqp=CAU'
+  return 'https://i.pinimg.com/736x/a2/ac/ce/a2acce21190c55c768502960f8a028b5.jpg'
 }else if(yes === 'Slytherin'){
-  return 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4NMPlIS0G3xFIqqvx5Bfe9VFfZjDpxt1lxw&usqp=CAU'
+  return 'https://i.pinimg.com/736x/7f/3c/05/7f3c055a2f71bb6ce41117656164ca83.jpg'
 }else if(yes === 'Hufflepuff'){
-  return 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHL9s8IOBnDwmAciv4UuOl50ZnSNcjKdd6aZ3gV6aX9qsMjYEC2CgRJ_4Wfqv7LwyM5zo&usqp=CAU'
+  return 'https://i.pinimg.com/474x/81/00/4c/81004c31e15b09aaee1e3be43c744d62.jpg'
 }
 }
 const houseMotto = function (yes) {
@@ -146,7 +146,7 @@ const voldOnDom = (vold) => {
   let domVold ="";
   for(const member of vold) {
     domVold += `<div> <h3></h3></div><div class="card" style="width: 18rem;">
-    <img class="card-img-top" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBY2iEMgrlOSRQibKeylnjBKuzRIf1-JSbQQ&usqp=CAU" alt="Card image cap">
+    <img class="card-img-top" src="https://i.pinimg.com/474x/73/2a/5c/732a5c1522b76cd30362fc9a6e9caffa.jpg" alt="Card image cap">
     <div class="card-body">
     <h1>Voldemort's Pet</h1>
       <h5 class="card-title">${member.name}</h5>
