@@ -90,6 +90,9 @@ color:black;
   
 
 }
+.student-card-button-div{
+  text-align:center;
+}
 .card-container{
   display:flex;
   justify-content:space-evenly ;
