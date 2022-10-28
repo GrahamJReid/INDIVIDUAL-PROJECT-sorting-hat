@@ -40,9 +40,21 @@ return 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQykfFWLFvp3OaBmlTC
 }else if(yes === 'Hufflepuff'){
   return 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHL9s8IOBnDwmAciv4UuOl50ZnSNcjKdd6aZ3gV6aX9qsMjYEC2CgRJ_4Wfqv7LwyM5zo&usqp=CAU'
 }
-
-
 }
+const houseMotto = function (yes) {
+  if(yes === 'Ravenclaw') {
+    return 'Or yet in wise old Ravenclaw, If you have a ready mind, Where those of wit and learning, will always find their kind'
+  }else if(yes === 'Gryffindor') {
+return 'You might belong in Gryffindor, Where dwell the brave at heart. Their daring, nerve and chivalry set Gryffindor apart.'
+  }else if(yes === 'Slytherin'){
+return 'Or perhaps in Slytherin You will make your real friends, These cunning folk use any means to achieve their ends.' 
+  }else if(yes === 'Hufflepuff') {
+return 'You might belong in Hufflepuff,Where they are just and loyal,Those patient Hufflepuffs are true and unafraid of toil'
+
+  } 
+  }
+
+
 //////////////studentsOnDom/////////////
 const studentsOnDom = (students) => {
   let domStudent ="";
@@ -52,7 +64,10 @@ const studentsOnDom = (students) => {
     <div id="studentCardBody" class="card-body">
       <h5 class="card-title" id="testing"><div id="voldName">${member.name}</div></h5>
       <p class="card-text">${member.house}</p>
-      <button id="expelStudent--${member.id}">EXPEL</button>
+      <p>${houseMotto(member.house)}</p>
+      <div class="student-card-button-div">
+      <button class="sorting-buttons" id="expelStudent--${member.id}">EXPEL</button>
+      </div>
     </div>
   </div>
     `
