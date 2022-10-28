@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Monoton&display=swap" rel="stylesheet">
+
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
   <link rel="stylesheet" href="main.css">
   <meta charset="UTF-8">
@@ -14,22 +16,21 @@
   <h1 class="page-title">Graham's Sorting Hat</h1>
 
 <!--this is the initial sorting hat card -->
-<div class="sort-card">
-<div class="card" style="width: 18rem;">
-  <img class="card-img-top" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAz2eCbXt7g970ISp83F7OYqrcBP2CC0s7Og&usqp=CAU" alt="Card image cap">
-  <div class="card-body sort-card-body">
-    <h5 class="card-title"></h5>
+<!--<div class="sort-card">
+<div class="card hat-hat" style="width: 10rem;">-->
+  <img class="card-img-top sort-image" src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAoHCBYVFBISFRISEhgSFRESERIYERESGBEfGBQZGRgUGBgcIS4mHB4rHxgYJjomKy80ODU1GiQ7QDszPy40NjEBDAwMEA8PGBERETEhGSMxMTExPzExMTExNDE/MT8xMTExMTExMTExMTExNDExMTExMTExMTExMTExMTExMTExMf/AABEIAOAA4AMBIgACEQEDEQH/xAAcAAEBAAIDAQEAAAAAAAAAAAAAAQYHAgUIBAP/xAA/EAACAQMBBgQDBgUCBAcAAAABAgADBBESBQYhMUFRBxNhcSKBkRQjMoKhsTNSYnKSQsFTk6LhQ0VUY8LD0v/EABYBAQEBAAAAAAAAAAAAAAAAAAABAv/EABURAQEAAAAAAAAAAAAAAAAAAAAB/9oADAMBAAIRAxEAPwDUU5TjiWAMkpEQECIgIzEkCmMQDAgX5SYiIDEAwIgAZ2uytsPSIGSVnVQYG0LC6WooZW58x2n06T3mudjbTak44nTnvNhWlyrqGB6QzXMg940nvOckK/C4U6G49DNabRXFWp7zZ9b8Lexms9rj76p7wR8ZiJYVJJZIFkyZSZMQOUgE5SGAzEmJyMDiRBEsYgQyxEABGYlECGAJRJApkxBmd7p+GNzeIleowtaTjUhZS9Rx0dUyMKeOCxHQ4IOYGCAyE4noPZnhLs+nxqLWuTwP3lUqOHZaenh6HMyrZ+7tpQ/g2lvSP8y0UDH3bGT9YHlIMOhEyPd7a+ghGPCei9t7EoXdI0K9MOp/CeTIejI3NSO4/aaV254TXlFi1tou0BymHWnVA/qVsLkehOew5QO1p1AwBBzmcp0OyVuKH3VzQrUccAXpuisc9GIwfkZ3uYRxfkfYzW+3FxWf3myW5H2mvd5ExVPvCR1ERENEZiTECyQZRAsREC4kMQsAIlMCBIlkJgURmQGXMCExKRJA7ndDZX2q+tLYjKvUU1B3RAXcfNVYfOeoa9IlHVD5ZKsqsAPgJGAQOXD/AGmlfAzZuu5ubojhQpLSQ44aqrZJB7hUI/NN5QMc3M2q9e2xXx9otne1uxy+8pnBbkODLpbgMfFw5T7rTaBe5uaGF00Kdq64zqJqeZnJzjHwLj5zE9q7TTZ+16bO4WltWmq1s8qdWkQlOsT0VlZVP1J4T5n3op223rihUIVLqjaUy5xim6qzUwx6KRUIz3K9MmBsqInXbR2xb2+nz7ihQ1ZKCpVSmWxjOkMeOMjl3gfeRngeOeYnTbQ3Zt6uT5Ypsf8AXTwh+Y/CfmJ+Lb67PH/mFp/zkP7GSnvpYMcLeUXPZSX/AGEDEtt7t1LcFv4lP/iAYKf3L09+XtNUb1D7z5mb+2hvfbhWC6qxII06CqnI5MWA4fIzQO9a4qD3MI6IRLBMKkskQBEGWDASyYlECCWIEBJLmSBcSYjMoEAJDLAgJaaliFUFmYgKoBYsewA4kyL2wSegHX0E9K7hbqJY2yAoPPdVa5qYBbURxQN0ReQA9TzJgfN4V7Ca0sEFRSlSu7V6isCGXOFRSDyOlVOOhJmaxEDHN8d16V/btSdUFQK3kVyoLUm4EYPPSSACOo9cTVNj4XV61i1y7Ot0SzU7Z9JDqnwimzNxDNp+E5wBpB55G+YgYluDVr/ZbcVav2lWprorFSlSmy/C9vWQk5ZGBXVnJ0kEAjLYX49UkxYPqAfNwmnqykIc+wIA/NMv3622dmWr16FAM9atgk6vLR3XjVZQeugcBgFmyTknPn7bG1611VavXqNVdsDUcAADkqqOCqOPAdz3gfBO13efFZe3GdWJ+9lVKOp9R+8DZ6HgJhO94+NfczM7Vsop9B+0w7fJfjX3MJGOSYlkhVxLJKIHEwIgwOY5SZiICXMhgmBJTJLAYiUwIEMmJzkgZT4abK+0bStUIytIm4qe1P4lz+fQPnPS81T4KbvPTStfVEKeeq07fIwSgOpn/tZtOO+jPIibWgIiICIiB1m39lJd29a2f8NZCmcZKHmrj1VgrD2nle8tmpVHpOMPSd6br2ZGKn9RPXc0P41bC8q6S8UHTdDS/YVEUD5al0/NWga1nNG4g9iP3nCIGwdlbVQ01BYZ5YnSb2sGKsPWfDu8gLgu2AMHnPv3pqI2NJB59oRjERmIUgxECGMxLA5SYgQTAuJMRECgwTAgiAJ4QsYiAImd+F2563tZq1Yare2K6k/4zkZWmf6QOJ75A6nGCCbu8CrhTa3VPI1JcCow66XpIqn2zTb6QNnIgAAAAAAAAGAAOQAnTb13N5ToF7KhSuKgPFXcrgdSq8NR9NQ+fKd7Pi2tcVKdGrUpUjXqKrNTpBgvmMBwXJ5QNL0fFu/p1Cte3t20MVqUjTq0HUjgVyWOk+6mbR3S3vt9oIzUSyumPNoPgPTzybgSCp7j54PCec9vXlatcVqlyGWs7ZqoyGmUIUBV0nioChQAegE4bI2nVtqyXFFyjocg9GHVWHVTyIges4mP7nby09oW610+Bx8NelnJpOOa+qnmD1B6HIGQQEx3ffd8X1nVt8qrnD0GPJHXipJwcA8VJHRjMiiB5GvLV6TvSqq1N6bFXVhxUjp/36jBnzkzP/Gioh2lhcalt6C1scy+p2GfXQafyxMAxA5LUI5HE4aiTzzGI0wKZMSkxmBBLEQIZMSmTMD9JDKIxAkhlkIgVYxEQIIE5QRAgmyfA6/0XtageAr0Cw9WpOCB/i7/AEmthMx8KUY7WtNIJ0i4Z+wXyHXJ+bAe5ED0fERAwfxM3TF7bM9NAbm3BaiwADVFH4qBPUEZI7MByyZ53HGewJhu3vDixumao1JqNRzlqtF/LLEnJLKQUJJJydOTA0duhvLVsLha9P4lOEr0icLWTPL0Ycw3Q+hIPpLYu1qV1RS4oOHRxw6EHqrDow6ieed6N0jQvfsNq73zFFYoianpE5GhwvAYGk6uGAwzjrk2wfDra1NGNO7Wx1j4qa3NUMxxw1+WCoP9QJIgbJ3s30trBT5reZVIzTtkILt2LdFX1PY4yeE01f723+07inQWo1EVaipRoUXdFTU3BnZfibSOJJ4DSTgTo9u7Fube48u5RkqVGwru+VrEsBrFUnDDJGTnh1xN57ibhU7Aea7CtcMNLVdOFpg80pg8h3J4n05QNT+LVm1PadYsSRVp29RGPNgKS0yT66qbTDBNzeOmyWana3arkUzUo1TjkH0lCew1Kw92E0zAYnM8ZDIIEnGczxkxAgjMsYzAs4ymAIACMSkRmBJYJlECARBlECRmXEQJNt+BOygWu7thkrotqZ7Z+Op/9f6zUc9DeEGzDQ2bTZgQbl3ucHswVEPsVRW/NAzuIiAmJ7XpX9y7UKONn0AdL3RdKlxVGePkKpIQEf6mOriDgEYmWTgzYGTwA4k8sQOr2Du/Qs0NOimnUdVSox1VKrcyzueLHJPoOmJ28wnbXiZs+3LKKrXLKcFaCawPzkhPo3SYvdeNag4p2DsO73KofoqN+8DaO0dn0rhDSrUkqo3NHUMPQ8eR9RxEbOslo00pKzstMaU1OXZV6LqPEgDgM5OBzmoj401uljSHvXc//CWl401f9VjTYdluHU/UoYG2tr7OS4oVbeoMpVRkbuM8mHqDgg9wJ5b2xsx7a4rWtT8VFyjHGAw5qw9GUqw9DPT+wNsUryhTuaJyrjkcakYfiRh0IPD/ALTW/jbu5qSntFFyaeKNzj+Ut9259mJU/wB69BA03iCIEYgUT9EIIn5GVDAMs4gT9Hn5rAHnLmTEZgWXMRAglxECAiUyQEskQMu8PNzztCudeVt6Ok12BwXz+Gip7nByeg9SJ6MpUwqqqgBVACqBgAAYAA7YmB+C1MDZuoDBe4rs57kaVH6Ko+UyjZ+8dtXetSSuheg9SlVpsdDoUbSx0tglcj8Q4QO5iYxtHfKgjNSt1qX9YcDRtl83QSSB5lQfCgyDnJyO06W82BtPaAP2q6XZ9Fudpb/eOVI/DUrZAJ74yp7QP13r8S7W01U6ZF3WGQURxoQg4w9TiAR2GTw44mmt498rq+JFesQh5UKZNOkPy5y/LmxJ7Tc2zfCrZ1IDVSqXBHHVVqvj/FNKkehEyrZ+xbe3/gW1Cj6pSRCfcgZMDzNY7tXlbHlWdy4PJvJdV/zYBf1mQ2fhZtKp+KjTo+tSun7JqM9ExA0hbeC9yR8d3bIeyU6lQfU6f2n61PBetj4b6kT60HX9Q5m6ogai3a2BtXZBcpSoX1GoQ1WhTrsrAjgHTWow2OBAByAB0BHb7o71jaBu9nXtJqVQitik4Ku9JyfgYYGHVWUZwMjDdDNjT46uz6T1KdZqaNUpavLqlFLpqUqwVuYBBPCB5o3u3bewuXoPll/FQqY4VUJ4N/cORHQjsQT0YM9GeKGxFubCsxXNS1V7iiw5rpGXX1DKCMdwD0E85EgcYCMTLdh+Hd/dAMtHyEPKpXLUs+y4LH3049Zm1j4LJzr3rt/TToqmPzOWz9BA1C4+Gflib/o+EuzwMMbmp6tWCn/oVROi3o8IkFJ6lk9U1EGryKjKwqAc1RsAq3bJIPLhzgadzIJWUgkEYIyCDwIx0I6GQmBZcQYgFlM4iWAlxOOsdx9RKPSAEsQYG7/Au51WdzTz/DuCwHYPTT/dW/Wd5tvw5srq6+11VqZIHm0lcIlYgYDNgagcYB0kZwPXOK+A1uwW/qYOlmtqanoWRajMPkKifWbdgfLZWVOii06VNKSL+FEUKo+Qn1REBERAREQEREBET8qlQKCzEKACSxIAAHMknkIHJlBGDgg8CDxz6TqNnbs2du/mUbS3pPz1rSQMvcKeaj0ExneHxUs7fUtHN444fAdNIH1qngR/aGmqN5N+r291K9TyqTZH2ellFI7Oc6n4cwTj0EDcm8niLZWmU8z7RVGR5VIh8Hs7/hXj0zn0msts+K19WbTR0WiE8AirUfHYu4x9FHKYNaWlSo3l0qVSq2MhEpu7Y76VBMzXZHhbtCphmp07cf8Au1Rq99KBj8jiB0NxvJegh/t15qPHP2msP+nVjHpjE2T4Vb63d1Wa0uPvwtNqi19AVqeCAFqEYBBzwOM5HXp1l14f2VsQ20NqIoA1eTTVUc454BLM35VBnzbS8QLe2ota7ItvIVsh7l1wzcMalDEsx/qbl2gYpv2qDaV+Exp89+XEajguP8i/zmPzkxJJJJJJJJJySTzJPWccQOUSYmQbh7LS62ha29UZRmdnX+cU6bvpPoSgB9CYHcbm+HNxeqKzt9nt24q5XVUqjP8A4a8MDn8R+QabY2R4c7PoDH2Za7dXr4rlvXSw0D5KJlaIAAAAAAAABgADkAJ+kD4KeyLdRpW2oKAMACjTAHpgCfDd7oWFXOuxtSTzYUKaN/koBnexAwO98KNnPnRTrUD3p13P6VNQ/SddT8G7MHLXF4w/l10Fz6EhP2mzYgfBsjZdK2pJQoUxTRPwqMnmckkniSTzJn3xEBERAREQET8Lq5SmhqVHSmqjLO7Kir6ljwEw3bHihYUMhaj3TDpRTUv+bEKR7EwM5iaP2n4x3DZFvbUaI44Z2au3ocDSAfrMSv8AfjaFb8d7XUfy02FAe33YXI94HpesSFYqAWwdIYlVJ6AkA4GeuDNZbyboX16T9q2pb06ecrb01YU1/KWGoju2T2xNMXNw9Q6qlSpUP8zu7n6sTPw0DsPoIG2KfhhZUwWuNsIAOek29AD5szStY7u2nF6z3zjiFFR6+rHT7sKnyY4mp9A7D6CUwNo3HistFfK2fs+jboD8JfAHqTSp4GfXUecxTam/l/cZD3VRVP8Aop4oKPTKYYj3JmMwYHOowJz1PEnqT3PecIiAMGBECz97K7elUSrTdqb02Do681I6+vseBHA8J+JkWBvbdLxSt66rTuytrV4AucijUPcMfwezcOxM2JTqhgGVgwIyrAggjuCOc8iz7dm7Vr25zb161DjkhKjKGP8AUoOG+YMD1jE862XiftKnzrpWHapQpn9U0n6mdxb+Ml2Px2tq/qprU/3ZoG8omlR401v/AEVH/n1P/wATgfGe46WdAe9Wof8AaBu2Joiv4w3xzoo2aD1Ss5Hz1gfpOquvE3ab8rlaQ7JQpD9WDH9YHoydZtLbttb/AMe5oUfR6qKT7KTk/ITzVfbx3dbPmXl04PNTXqBf8VIX9J1QQDkIG99r+LlnTyKCVbpuOCF8mnn1Zhqx6hTMG2v4r39XIpeVar00qKj/ADZ8j6KJgJgQPov7+rXbXWq1K7dGqO7ke2o/D7CfPAECAgSkSCAIkliBCIEpnGAgCXEGAjECICTEuIMBLLAgQiIgwERKIHESyyQKJDKIMCCWIzAAQREEQEZjEhgMSySwJiIMuIHHMSwYEzIJyEkBEokgIxGJYCXERAQIIiAxEGMQECMRAQIEQEZgxARKBIBAQBBiAMRiMYgMQYgCBAIlMhEBJichECSGUxAZiWSB/9k=">
+  
     <p class="card-text">Hello I am the Sorting Hat</p>
-    <button id="showForm">Start Sorting</button>
+    <button class="start-button" id="showForm">Start Sorting</button>
   </div>
 </div>
 </div>
 <div class="sort-div">
-<div><button id="yes">Ravenclaw</button></div>
-<div><button id="yes2">Gryffindor</button></div>
-<div><button id="yes3">Slytherin</button></div>
-<div><button id="yes4">Hufflepuff</button></div>
-<div><button id="yes5">Show All</button></div>
+<div><button class="sorting-buttons" id="yes">Ravenclaw</button></div>
+<div><button class="sorting-buttons" id="yes2">Gryffindor</button></div>
+<div><button class="sorting-buttons" id="yes3">Slytherin</button></div>
+<div><button class="sorting-buttons" id="yes4">Hufflepuff</button></div>
+<div><button class="sorting-buttons" id="yes5">Show All</button></div>
 </div>
 <div id="form"></div>
 
@@ -46,8 +47,8 @@
 </div>
 </div>
 
-<!--<embed class="audio-player"  src="https://ia801309.us.archive.org/28/items/HarryPotter-hedwigTheme/Harry_Potter_Theme_Song_Hedwigs_Theme.mp3" autoplay loop></embed>-->
-<audio controls> 
+
+<audio class="audio-player" controls> 
   <source src="https://ia801309.us.archive.org/28/items/HarryPotter-hedwigTheme/Harry_Potter_Theme_Song_Hedwigs_Theme.mp3">
   
 </audio>
