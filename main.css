@@ -21,9 +21,10 @@ body{
   margin:25px;
 }
 .sort-image{
-  width:200px;
-  height:200px;
+  width:150px;
+  height:150px;
   border-radius:100px;
+  box-shadow:0px 0px 500px 40px gold;
 }
 .sorting-buttons{
   background-color:#740001;
