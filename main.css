@@ -68,3 +68,6 @@ border:solid black 2px;
 .Hufflepuff{
   background-image: linear-gradient(to right,#FFD800 ,#000000);
 }
+.audio-player{
+  background-color: #FFD800;
+}
