@@ -66,7 +66,7 @@ const studentsOnDom = (students) => {
       <p class="card-text student-card make-little-big">${member.house}</p>
       <p class="student-card">${houseMotto(member.house)}</p>
       <div class="student-card-button-div">
-      <button class="sorting-buttons" id="expelStudent--${member.id}">EXPEL</button>
+      <button class="expel-button" id="expelStudent--${member.id}">EXPEL</button>
       </div>
     </div>
   </div>
@@ -161,7 +161,7 @@ const voldOnDom = (vold) => {
     <h1></h1>
       <h5 class="card-title vold-card-text make-bigger-name">${member.name}</h5>
       <p class="card-text vold-card-text">Taken from ${member.house}</p>
-     <button class="sorting-buttons" id="forgiveStudent--">Forgive</button>
+     <button class="forgive-button" id="forgiveStudent--">Forgive</button>
     </div>
   </div>
     `

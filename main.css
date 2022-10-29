@@ -74,6 +74,36 @@ body{
   border:solid #740001 2px;
   transform:scale(1.7);
 }
+.expel-button{
+  background-color:#740001;
+  width:200px;
+  border:solid gold 2px;
+  color:gold;
+  border-radius:25px;
+  font-family: 'Island Moments', cursive;
+  font-size:25px;
+}
+.expel-button:hover{
+  background-color:gold;
+  color:#740001;
+  border:solid #740001 2px;
+  
+}
+.forgive-button{
+  background-color:#740001;
+  width:200px;
+  border:solid gold 2px;
+  color:gold;
+  border-radius:25px;
+  font-family: 'Island Moments', cursive;
+  font-size:25px;
+}
+.forgive-button:hover{
+  background-color:gold;
+  color:#740001;
+  border:solid #740001 2px;
+  
+}
 
 .sort-card{
  display:flex;
