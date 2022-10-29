@@ -161,7 +161,7 @@ const voldOnDom = (vold) => {
     <h1></h1>
       <h5 class="card-title vold-card-text make-bigger-name">${member.name}</h5>
       <p class="card-text vold-card-text">Taken from ${member.house}</p>
-     <button class="forgive-button" id="forgiveStudent--">Forgive</button>
+     <button class="forgive-button" id="forgiveStudent--${member.id}">Forgive</button>
     </div>
   </div>
     `
@@ -184,7 +184,7 @@ forgive.addEventListener('click', (e) => {
 
 
 
-    
+    students.sort((a, b) => a.house.localeCompare(b.house))
     
     studentsOnDom(students);
     voldOnDom(vold);
