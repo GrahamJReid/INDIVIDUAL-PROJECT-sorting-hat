@@ -38,7 +38,7 @@ return 'https://i.pinimg.com/736x/16/ee/c9/16eec9b0e3d461ec25078ae8b88d1870.jpg'
 }else if(yes === 'Slytherin'){
   return 'https://i.pinimg.com/736x/7f/3c/05/7f3c055a2f71bb6ce41117656164ca83.jpg'
 }else if(yes === 'Hufflepuff'){
-  return 'https://i.pinimg.com/474x/81/00/4c/81004c31e15b09aaee1e3be43c744d62.jpg'
+  return 'https://i.pinimg.com/474x/b0/69/7d/b0697d0c48af2e012ec3730f0a3860ee.jpg'
 }
 }
 const houseMotto = function (yes) {
@@ -59,7 +59,7 @@ return 'You might belong in Hufflepuff,Where they are just and loyal,Those patie
 const studentsOnDom = (students) => {
   let domStudent ="";
   for(const member of students) {
-    domStudent += `<div class="card ${member.house}" style="width: 18rem;">
+    domStudent += `<div class="card ${member.house}" style="width: 10rem;">
     <img class="card-img-top" src="${imageEmblem(member.house)}"
     <div id="studentCardBody" class="card-body">
       <h5 class="card-title" id="testing"><div id="voldName">${member.name}</div></h5>
@@ -141,17 +141,27 @@ app.addEventListener('click', (e) => {
     
   }
 });
+
+
+/////////////////////////////////////
+
+
+
+
+
+
+
 /////////////////////////////////////volONDOM//////////////////////////////////
 const voldOnDom = (vold) => {
   let domVold ="";
   for(const member of vold) {
-    domVold += `<div> <h3></h3></div><div class="card" style="width: 18rem;">
+    domVold += `<div> <h3></h3></div><div class="card" style="width: 10rem;">
     <img class="card-img-top" src="https://i.pinimg.com/474x/73/2a/5c/732a5c1522b76cd30362fc9a6e9caffa.jpg" alt="Card image cap">
-    <div class="card-body">
-    <h1>Voldemort's Pet</h1>
+    <div class="card-body vold-card-body">
+    <h1></h1>
       <h5 class="card-title">${member.name}</h5>
       <p class="card-text">Taken from ${member.house}</p>
-     
+     <button id="forgiveStudent--">Forgivness</button>
     </div>
   </div>
     `
@@ -159,10 +169,31 @@ const voldOnDom = (vold) => {
   renderToDom("#vold",domVold);
   
 }
-/////////////////////////////filter///////////////////////////////////////
+/////////////////////////////forgiveness///////////////////////////////////////
+const forgive = document.querySelector("#vold");
+forgive.addEventListener('click', (e) => {
+  if (e.target.id.includes("forgiveStudent--")) {
+
+    const [, id] = e.target.id.split("--");
+
+    const index = vold.findIndex(e => e.id === Number(id));
+    let removed = vold.splice(index, 1);
+    students.push(removed[0]);
+    
+    
 
 
 
+    
+    
+    studentsOnDom(students);
+    voldOnDom(vold);
+    console.log(vold);
+    
+  }
+});
+
+//////////////////////////////filter/////////////////////////////////////////////
 const filter = (array, house) => {
   const typeArray = [];
 
@@ -208,7 +239,9 @@ showA.addEventListener('click', () => {
   studentsOnDom(students);
 });
 
+
 const startApp = () => {
+
   studentsOnDom(students);
   events();
 }
