@@ -14,6 +14,15 @@ body{
   color:gold;
   /*font-family: 'Monoton', cursive;*/
   font-family: 'Cinzel Decorative', cursive;
+  font-size:80px;
+  margin:20px;
+}
+.page-subtitle{
+  color:gold;
+  /*font-family: 'Monoton', cursive;*/
+  font-family: 'Cinzel Decorative', cursive;
+  font-size:55px;
+  margin:30px;
 }
 #sorting-card-top{
  margin:50px;
@@ -24,7 +33,7 @@ body{
 #history-paragraph{
   font-family: 'Island Moments', cursive;
   color:gold;
-  font-size:50px;
+  font-size:65px;
 }
 .sort-div{
   display: flex;
@@ -34,19 +43,25 @@ body{
 }
 .sort-image{
   
-  width:250px;
-  height:250px;
+  width:350px;
+  height:350px;
   border:solid silver 5px;
   border-radius:200px;
   box-shadow:0px 0px 500px 100px gold;
   margin:50px;
 }
 .sort-image:hover{
-  transform:scale(1.1);
+  transform:scale(1.3);
+}
+.formy{
+  margin:35px;
+  
+
 }
 .sorting-buttons{
   background-color:#740001;
-  width:100px;
+  width:200px;
+  
   border:solid gold 2px;
   color:gold;
   border-radius:25px;
@@ -73,17 +88,19 @@ margin:25px;
   background-color:gold;
 }
 #Name{
-  width:200px;
+  width:350px;
  text-align:center;
- font-size:25px;
+ font-size:60px;
  font-family: 'Island Moments', cursive;
+ border-radius:25px;
 }
 .start-button{
   background-color:#740001;
-width:100px;
+width:150px;
 border:solid gold 2px;
 color:gold;
 border-radius:25px;
+font-size:40px;
 }
 .start-button:hover{
   background-color:gold;
@@ -103,6 +120,7 @@ border-radius:25px;
 color:black;
 font-family: 'Island Moments', cursive;
 font-size:30px;
+margin:30px;
 }
 #sortButton:hover{
   background-color:#740001;
@@ -116,12 +134,22 @@ flex-direction: row;
 flex-wrap:wrap;
 width:500px;
 }
+.student-card{
+  font-family: 'Island Moments', cursive;
+  color:gold;
+  font-size:29px;
+}
 .voldemort-pet-div{
   display:flex;
 flex-direction: row;
 flex-wrap:wrap;
 width:500px;
 
+}
+.vold-card-text{
+  font-family: 'Island Moments', cursive;
+  color:gold;
+  font-size:35px;
 }
 .student-card-button-div{
   text-align:center;
@@ -131,17 +159,20 @@ width:500px;
   justify-content:space-evenly ;
 }
 .Ravenclaw{
-  background-image: linear-gradient(to right,#0E1A40 ,#946B2D );
+  /*background-image: linear-gradient(to right,#0E1A40 ,#946B2D );*/
+  background-color:#0E1A40;
 }
 .Gryffindor{
-  background-image: linear-gradient(to right,#740001 ,#D3A625 );
+  /*background-image: linear-gradient(to right,#740001 ,#946B2D );*/
+  background-color:#740001;
 }
 .Slytherin{
-  background-image: linear-gradient(to right,#1A472A ,#5D5D5D);
-
+  /*background-image: linear-gradient(to right,#1A472A ,#5D5D5D);*/
+background-color:#1A472A;
 }
 .Hufflepuff{
-  background-image: linear-gradient(to right,#FFD800 ,#000000);
+  /*background-image: linear-gradient(to right,#FFD800 ,black);*/
+  background-color:black;
 }
 .vold-card-body{
   background-image:linear-gradient(to right,silver,grey)
@@ -151,4 +182,10 @@ width:500px;
   border:solid gold 5px;
   border-radius:50px;
   margin:300px;
+}
+.make-bigger-name{
+  font-size:45px;
+}
+.make-little-big{
+  font-size:40px;
 }

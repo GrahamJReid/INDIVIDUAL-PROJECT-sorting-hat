@@ -59,12 +59,12 @@ return 'You might belong in Hufflepuff,Where they are just and loyal,Those patie
 const studentsOnDom = (students) => {
   let domStudent ="";
   for(const member of students) {
-    domStudent += `<div class="card ${member.house}" style="width: 10rem;">
+    domStudent += `<div class="card  ${member.house}" style="width: 13rem;">
     <img class="card-img-top" src="${imageEmblem(member.house)}"
     <div id="studentCardBody" class="card-body">
-      <h5 class="card-title" id="testing"><div id="voldName">${member.name}</div></h5>
-      <p class="card-text">${member.house}</p>
-      <p>${houseMotto(member.house)}</p>
+      <h5 class="card-title" id="testing"><div class="student-card make-bigger-name" id="voldName">${member.name}</div></h5>
+      <p class="card-text student-card make-little-big">${member.house}</p>
+      <p class="student-card">${houseMotto(member.house)}</p>
       <div class="student-card-button-div">
       <button class="sorting-buttons" id="expelStudent--${member.id}">EXPEL</button>
       </div>
@@ -155,12 +155,12 @@ app.addEventListener('click', (e) => {
 const voldOnDom = (vold) => {
   let domVold ="";
   for(const member of vold) {
-    domVold += `<div> <h3></h3></div><div class="card" style="width: 10rem;">
+    domVold += `<div> <h3></h3></div><div class="card" style="width: 14rem;">
     <img class="card-img-top" src="https://i.pinimg.com/474x/73/2a/5c/732a5c1522b76cd30362fc9a6e9caffa.jpg" alt="Card image cap">
     <div class="card-body vold-card-body">
     <h1></h1>
-      <h5 class="card-title">${member.name}</h5>
-      <p class="card-text">Taken from ${member.house}</p>
+      <h5 class="card-title vold-card-text make-bigger-name">${member.name}</h5>
+      <p class="card-text vold-card-text">Taken from ${member.house}</p>
      <button class="sorting-buttons" id="forgiveStudent--">Forgive</button>
     </div>
   </div>
