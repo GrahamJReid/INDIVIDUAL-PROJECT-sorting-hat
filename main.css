@@ -12,7 +12,8 @@ body{
 
 .page-title{
   color:gold;
-  font-family: 'Monoton', cursive;
+  /*font-family: 'Monoton', cursive;*/
+  font-family: 'Cinzel Decorative', cursive;
 }
 #sorting-card-top{
  margin:50px;
@@ -21,8 +22,9 @@ body{
   
 }
 #history-paragraph{
-  
-  
+  font-family: 'Island Moments', cursive;
+  color:gold;
+  font-size:50px;
 }
 .sort-div{
   display: flex;
@@ -32,11 +34,15 @@ body{
 }
 .sort-image{
   
-  width:150px;
-  height:150px;
+  width:250px;
+  height:250px;
+  border:solid silver 5px;
   border-radius:200px;
-  box-shadow:0px 0px 500px 50px gold;
+  box-shadow:0px 0px 500px 100px gold;
   margin:50px;
+}
+.sort-image:hover{
+  transform:scale(1.1);
 }
 .sorting-buttons{
   background-color:#740001;
@@ -44,11 +50,14 @@ body{
   border:solid gold 2px;
   color:gold;
   border-radius:25px;
+  font-family: 'Island Moments', cursive;
+  font-size:25px;
 }
 .sorting-buttons:hover{
   background-color:gold;
   color:#740001;
   border:solid #740001 2px;
+  transform:scale(1.7);
 }
 
 .sort-card{
@@ -66,6 +75,8 @@ margin:25px;
 #Name{
   width:200px;
  text-align:center;
+ font-size:25px;
+ font-family: 'Island Moments', cursive;
 }
 .start-button{
   background-color:#740001;
@@ -87,12 +98,17 @@ border-radius:25px;
 #sortButton{
   background-color:gold;
 width:100px;
-border:solid black 2px;
+border:solid #740001  2px;
+border-radius:25px;
 color:black;
+font-family: 'Island Moments', cursive;
+font-size:30px;
 }
 #sortButton:hover{
   background-color:#740001;
+  border:solid gold 2px;
   color:gold;
+  transform:scale(1.5);
 }
 .hogwarts-student-div{
 display:flex;

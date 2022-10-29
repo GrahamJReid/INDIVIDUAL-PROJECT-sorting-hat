@@ -161,7 +161,7 @@ const voldOnDom = (vold) => {
     <h1></h1>
       <h5 class="card-title">${member.name}</h5>
       <p class="card-text">Taken from ${member.house}</p>
-     <button id="forgiveStudent--">Forgivness</button>
+     <button class="sorting-buttons" id="forgiveStudent--">Forgive</button>
     </div>
   </div>
     `
