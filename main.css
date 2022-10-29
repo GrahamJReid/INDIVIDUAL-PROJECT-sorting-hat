@@ -167,7 +167,7 @@ width:500px;
 .student-card{
   font-family: 'Island Moments', cursive;
   color:gold;
-  font-size:29px;
+  font-size:35px;
 }
 .voldemort-pet-div{
   display:flex;
@@ -179,7 +179,7 @@ width:500px;
 .vold-card-text{
   font-family: 'Island Moments', cursive;
   color:gold;
-  font-size:35px;
+  font-size:55px;
 }
 .vold-card-text2{
   font-family: 'Island Moments', cursive;
@@ -219,7 +219,7 @@ background-color:#1A472A;
   margin:300px;
 }
 .make-bigger-name{
-  font-size:45px;
+  font-size:70px;
 }
 .make-little-big{
   font-size:40px;

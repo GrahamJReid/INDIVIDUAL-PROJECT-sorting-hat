@@ -67,7 +67,7 @@ const studentsOnDom = (students) => {
     domStudent += `<div class="card  ${member.house}" style="width: 13rem;">
     <img class="card-img-top" src="${imageEmblem(member.house)}"
     <div id="studentCardBody" class="card-body">
-      <h5 class="card-title" id="testing"><div class="student-card make-bigger-name" id="voldName">${member.name}</div></h5>
+      <p class="card-title" id="testing"><div class="student-card make-bigger-name" id="voldName">${member.name}</div></p>
       <p class="card-text student-card make-little-big">${member.house}</p>
       <p class="student-card">${houseMotto(member.house)}</p>
       <div class="student-card-button-div">
@@ -186,7 +186,7 @@ const voldOnDom = (vold) => {
     <img class="card-img-top" src="https://i.pinimg.com/474x/73/2a/5c/732a5c1522b76cd30362fc9a6e9caffa.jpg" alt="Card image cap">
     <div class="card-body vold-card-body">
     <h1></h1>
-      <h5 class="card-title vold-card-text make-bigger-name">${member.name}</h5>
+      <p class="card-title vold-card-text make-bigger-name">${member.name}</p>
       <p class="card-text vold-card-text"></p>
       <p class="vold-card-text2">${whyBad(member.house)}</p>
      <button class="forgive-button" id="forgiveStudent--${member.id}">Forgive</button>
