@@ -27,7 +27,12 @@ renderToDom("#form",wantForm);
 const showFormButton = document.querySelector("#showForm")
 
 showFormButton.addEventListener('click', ()=>{
+  
   formOnDom()
+  ///////////////////////////////
+ 
+ showFormButton.remove();
+  ///////////////////////////////
 });
 //////////////emblems on cards//////////////////////////
 const imageEmblem = function (yes) {
@@ -81,6 +86,19 @@ const studentsOnDom = (students) => {
 
 
 ////////////////////submit student for sorting////////////////////
+const createId = (array) => {
+  if (array.length) {
+    const idArray = [];
+    for (const el of array) {
+      idArray.push(el.id);
+    }
+    return Math.max(...idArray) + 1;
+  } else {
+    return 0;
+  }
+}
+
+
 const student = document.querySelector("#student");
 
 const newStudent = function (event) {
@@ -93,7 +111,7 @@ const newStudent = function (event) {
   }
   
   const obj = {
-    id:students.length + 1,
+    id:createId(students),
     name:document.querySelector("#Name").value,
     house:randomHouse(househouse),
      
@@ -147,8 +165,17 @@ app.addEventListener('click', (e) => {
 
 
 
-
-
+const whyBad = function (yes) {
+  if(yes === 'Ravenclaw') {
+return 'Voldemort is the Best!'
+}else if(yes === 'Gryffindor'){
+  return 'Voldemort is my Dad!'
+}else if(yes === 'Slytherin'){
+  return 'I wanna be like Voldemort when I grow up!'
+}else if(yes === 'Hufflepuff'){
+  return 'I eat Hogwarts for Breakfast!'
+}
+}
 
 
 /////////////////////////////////////volONDOM//////////////////////////////////
@@ -160,7 +187,8 @@ const voldOnDom = (vold) => {
     <div class="card-body vold-card-body">
     <h1></h1>
       <h5 class="card-title vold-card-text make-bigger-name">${member.name}</h5>
-      <p class="card-text vold-card-text">Taken from ${member.house}</p>
+      <p class="card-text vold-card-text"></p>
+      <p class="vold-card-text2">${whyBad(member.house)}</p>
      <button class="forgive-button" id="forgiveStudent--${member.id}">Forgive</button>
     </div>
   </div>
