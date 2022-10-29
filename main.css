@@ -181,6 +181,11 @@ width:500px;
   color:gold;
   font-size:35px;
 }
+.vold-card-text2{
+  font-family: 'Island Moments', cursive;
+  color:rgb(17, 66, 17);
+  font-size:50px;
+}
 .student-card-button-div{
   text-align:center;
 }
